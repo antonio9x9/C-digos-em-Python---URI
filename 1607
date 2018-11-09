@@ -1,0 +1,20 @@
+n=int(input())
+r = []
+while n >0:
+    x = input().split(" ")
+    a = x[0]
+    b = x[1]
+    qtd = 0
+    i = 0
+    while i < len(a):
+        if a[i] == b[i]:
+            qtd = qtd+0
+        elif(ord(a[i]) > ord(b[i])):
+            qtd = qtd + (abs(ord('z') - ord(a[i])) + abs(ord('a') - ord(b[i])))+1
+        else:
+            qtd = qtd+ abs(ord(b[i]) - ord(a[i]))
+        i = i+1
+    r.append(qtd)
+    n = n-1
+for x in r:
+    print(x)
