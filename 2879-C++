@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main(){
+	
+	int n, x, qtd = 0;
+	float y=0;
+	
+	scanf("%d", &x);
+	
+	for(int i =0; i < x; i++){
+		scanf("%d", &n);
+		if(n != 1)
+			qtd++;
+	}
+	
+	printf("%d\n", (qtd+(int)y));
+	
+	return 0;
+}
