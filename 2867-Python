@@ -1,0 +1,11 @@
+n = int(input())
+r = []
+while n > 0:
+    n = n - 1
+    a = input().split(" ")
+    b = int(a[1])
+    a = int(a[0])
+    r.append(str(pow(a, b)))
+
+for x in r:
+    print(len(x))
