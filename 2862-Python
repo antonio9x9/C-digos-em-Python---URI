@@ -1,0 +1,11 @@
+n = int(input())
+r = []
+while n > 0:
+    n = n-1
+    x = int(input())
+    if x > 8000:
+        r.append("Mais de 8000!")
+    else:
+        r.append("Inseto!")
+for x in r:
+    print(x)
