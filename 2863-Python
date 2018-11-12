@@ -1,0 +1,16 @@
+while True:
+    try:
+        n = int(input())
+        r = []
+
+        while n > 0:
+            n = n - 1
+            r.append(float(input()))
+        print(min(r))
+    except:
+        break
+
+
+
+
+
