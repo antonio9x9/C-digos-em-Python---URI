@@ -1,0 +1,8 @@
+n = int(input())
+m = n
+while n > 0:
+    n = n-1
+    x = input()
+while m>0:
+    m = m-1
+    print("gzuz")
