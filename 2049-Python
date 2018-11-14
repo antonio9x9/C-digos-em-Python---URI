@@ -1,0 +1,20 @@
+ins= 1
+i = False
+while True:
+    ass = input()
+    if ass == "0":
+        i = False
+        break
+    if i:
+        print()
+    crip = input()
+
+    print("Instancia " + str(ins))
+    if crip.count(ass) >=1:
+        print("verdadeira")
+        i = True
+    else:
+        print("falsa")
+        i = True
+
+    ins = ins+1
