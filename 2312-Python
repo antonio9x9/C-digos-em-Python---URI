@@ -1,0 +1,51 @@
+class Pais:
+
+    nome = ""
+    ouro = 0
+    prata = 0
+    bronze =0
+    pass
+
+paises = []
+lista = []
+
+n = int(input())
+while n > 0:
+
+    p = Pais()
+    x = input().split()
+    p.nome = x[0]
+    p.ouro = int(x[1])
+    p.prata = int(x[2])
+    p.bronze = int(x[3])
+    lista.append(p)
+    n = n - 1
+
+i = 0
+c = Pais()
+#percorrer a lista colocando o maior em primeiro
+while i < len(lista):
+    j= 0
+
+    while j < len(lista):
+        if (lista[j].ouro < lista[i].ouro):
+            c = lista[i]
+            lista[i] = lista[j]
+            lista[j] = c
+        elif (lista[j].prata < lista[i].prata) and (lista[j].ouro == lista[i].ouro):
+            c = lista[i]
+            lista[i] = lista[j]
+            lista[j] = c
+        elif (lista[j].bronze < lista[i].bronze) and (lista[j].prata == lista[i].prata) and (lista[j].ouro == lista[i].ouro):
+            c = lista[i]
+            lista[i] = lista[j]
+            lista[j] = c
+        elif (lista[j].nome > lista[i].nome) and (lista[j].bronze == lista[i].bronze) and (lista[j].prata == lista[i].prata) and (lista[j].ouro == lista[i].ouro):
+            c = lista[i]
+            lista[i] = lista[j]
+            lista[j] = c
+
+        j = j+1
+    i = i + 1
+for x in lista:
+    print(x.nome + " " +str(x.ouro)+ " " + str(x.prata)+ " " + str(x.bronze))
