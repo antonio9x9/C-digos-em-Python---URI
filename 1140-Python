@@ -1,0 +1,19 @@
+while True:
+    n = input()
+
+    if n == "*":
+        break
+
+    n = n.split(" ")
+
+    p = n[0][0].lower()
+
+    i =0
+
+    for x in n:
+        if x[0].lower() == p:
+            i = i+1
+    if i == len(n):
+        print("Y")
+    else:
+        print("N")
