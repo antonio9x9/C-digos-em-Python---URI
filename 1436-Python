@@ -1,0 +1,19 @@
+n = int(input())
+r = []
+casa = 1
+while n >0:
+    x = input().split(" ")
+
+    total = int(x[0])
+
+    x.remove(x[0])
+
+    x.sort()
+    x.reverse()
+
+    r.append("Case "+str(casa)+": "+ x[int((total-1)/2)])
+
+    casa = casa+1
+    n = n-1
+for x in r:
+    print(x)
