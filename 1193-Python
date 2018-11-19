@@ -1,0 +1,52 @@
+n = int(input())
+r = []
+case = 1
+
+while n > 0:
+    n = n-1
+    x = input().split(" ")
+
+    r.append("Case "+ str(case)+":")
+
+    if x[1] == "bin":
+        aux = x[0]
+        aux1 = int(aux)
+        dec = int(aux, 2)
+        r.append(str(dec) + " dec")
+
+        aux = x[0]
+        aux1 = int(aux)
+        dec = int(aux, 2)
+        r.append(str(hex(dec))[2:] + " hex")
+
+
+    elif x[1] == 'dec':
+        aux = x[0]
+        aux1 = int(aux)
+        dec = int(aux)
+        r.append(str(hex(dec))[2:] + " hex")
+
+        aux = x[0]
+        aux1 = int(aux)
+        r.append(str(bin(aux1))[2:] + " bin")
+
+
+    elif x[1] == 'hex':
+        aux = x[0]
+        dec = int(aux, 16)
+        r.append(str(dec) + " dec")
+
+        aux = x[0]
+        dec = int(aux, 16)
+
+        r.append(str(bin(dec))[2:] + " bin")
+
+    case = case+1
+
+    r.append("\n")
+
+for x in r:
+    if x != "\n":
+        print(x)
+    else:
+        print(x, end="")
