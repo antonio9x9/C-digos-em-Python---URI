@@ -1,0 +1,17 @@
+n = int(input())
+r = []
+while n > 0:
+    n = n-1
+    quad = int(input())
+
+    graos=1
+    while quad > 0:
+
+        graos = graos*2
+
+        quad = quad-1
+
+    r.append((graos-1)/12000)
+
+for x in r:
+    print(str(int(x))+" kg")
